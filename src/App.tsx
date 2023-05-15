@@ -1,7 +1,12 @@
 import "./App.css";
+import { Math } from "./components/puzzles/Math";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Math />
+    </>
+  );
 }
 
 export default App;

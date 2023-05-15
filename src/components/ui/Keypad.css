@@ -1,0 +1,18 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 320px;
+  text-align: center;
+  gap: 5px;
+}
+
+.keypad-key {
+  background-color: var(--warm-transparent);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.keypad-key:hover {
+  background-color: var(--warm-transparent-highlight);
+}

@@ -1,0 +1,10 @@
+:root {
+  --warm: rgb(255, 166, 0);
+  --warm-transparent: rgba(255, 166, 0, 0.125);
+  --warm-transparent-highlight: rgba(255, 166, 0, 0.26);
+}
+
+body {
+  background-color: black;
+  color: var(--warm);
+}
