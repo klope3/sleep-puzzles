@@ -1,10 +1,10 @@
 import "./App.css";
-import { Math } from "./components/puzzles/Math";
+import { MathExercise } from "./components/puzzles/MathExercise/MathExercise";
 
 function App() {
   return (
     <>
-      <Math />
+      <MathExercise />
     </>
   );
 }

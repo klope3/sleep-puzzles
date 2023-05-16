@@ -2,9 +2,31 @@
   --warm: rgb(255, 166, 0);
   --warm-transparent: rgba(255, 166, 0, 0.125);
   --warm-transparent-highlight: rgba(255, 166, 0, 0.26);
+
+  --size-40: 2.5rem;
+}
+
+body,
+input {
+  color: var(--warm);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   background-color: black;
-  color: var(--warm);
+  max-width: 768px;
+  height: 100vh;
+  margin: auto;
+}
+
+input {
+  border: none;
+}
+
+input:disabled {
+  background-color: transparent;
+}
+
+#root {
+  height: 100%;
 }

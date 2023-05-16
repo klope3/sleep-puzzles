@@ -1,10 +1,11 @@
-import { KeypadKeyType } from "../../types";
+import { KeypadKeyCallback, KeypadKeyType } from "../../types";
 
 type KeypadKeyProps = {
   keyData: KeypadKeyType;
+  onKeyPressed: KeypadKeyCallback;
 };
 
-export function KeypadKey({ keyData }: KeypadKeyProps) {
+export function KeypadKey({ keyData, onKeyPressed }: KeypadKeyProps) {
   const style =
     keyData.type === "blank"
       ? {
@@ -15,7 +16,11 @@ export function KeypadKey({ keyData }: KeypadKeyProps) {
   const content = keyData.type === "blank" ? "" : `${keyData.value}`;
 
   return (
-    <div className="keypad-key" style={style}>
+    <div
+      className="keypad-key"
+      style={style}
+      onClick={() => onKeyPressed(keyData)}
+    >
       {content}
     </div>
   );

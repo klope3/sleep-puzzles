@@ -1,6 +1,6 @@
 import { KeypadKey } from "./KeypadKey";
 import "./Keypad.css";
-import { KeypadKeyType } from "../../types";
+import { KeypadKeyCallback, KeypadKeyType } from "../../types";
 
 const keys: KeypadKeyType[] = [
   {
@@ -40,24 +40,28 @@ const keys: KeypadKeyType[] = [
     value: 9,
   },
   {
-    type: "blank",
-    value: undefined,
+    type: "backspace",
+    value: "X",
   },
   {
     type: "number",
     value: 0,
   },
   {
-    type: "blank",
-    value: undefined,
+    type: "submit",
+    value: "✓",
   },
 ];
 
-export function Keypad() {
+type KeypadProps = {
+  onKeyPressed: KeypadKeyCallback;
+};
+
+export function Keypad({ onKeyPressed }: KeypadProps) {
   return (
     <div className="keypad">
       {keys.map((elem) => (
-        <KeypadKey keyData={elem} />
+        <KeypadKey keyData={elem} onKeyPressed={onKeyPressed} />
       ))}
     </div>
   );
