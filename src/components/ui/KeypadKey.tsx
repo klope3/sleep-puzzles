@@ -17,7 +17,7 @@ export function KeypadKey({ keyData, onKeyPressed }: KeypadKeyProps) {
 
   return (
     <div
-      className="keypad-key"
+      className="keypad-key prevent-select"
       style={style}
       onClick={() => onKeyPressed(keyData)}
     >
